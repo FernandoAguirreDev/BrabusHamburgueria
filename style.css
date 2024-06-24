@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.5px;
+}
+
+header {
+    width: 100%;
+    height: 300px;
+    background-image: url('./assets/bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    z-index: 40;
+}
+
+.containerBurger {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerBurger img {
+    width: 128px;
+    height: 128px;
+    border-radius: 100%;
+    box-shadow: 2px 2px 20px black;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.containerBurger img:hover {
+    transform: scale(1.07) rotate(-7deg);
+}
+
+.containerBurger h1 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 36px;
+    margin: 16px 0;
+}
+
+.containerBurger p {
+    color: #ffff;
+    font-size: 18px;
+}
+
+#date {
+    color: #fff;
+    font-size: 15px;
+    padding: 4px 16px;
+    border-radius: 10px;
+    margin-top: 16px;
+}
+
+main {
+    margin-top: 310px;
+    margin-bottom: 20px;
+}
+
+.containerTitleMenu {
+    text-align: center;
+    margin-top: 36px;
+    margin-bottom: 24px;
+}
+
+.containerTitleMenu h2 {
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: bold;
+}
+
+.containerMenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 5vw;
+    gap: 1vw;
+}
+
+.menu {
+    display: flex;
+    background-color: #ebe8e8c0;
+    border-radius: 15px;
+}
+
+.menu h3 {
+    font-size: 15px;
+}
+
+.descriptionMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.valueMenu {
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+    gap: 30px;
+}
+
+.containerMenu img {
+    width: 128px;
+    height: 128px;
+    border-radius: 10px;
+}
+
+.containerMenu h3 {
+    font-size: 18px;
+}
+
+.containerMenu p {
+    font-size: 14px;
+}
+
+.containerMenu button {
+    width: 50px;
+    height: 22px;
+    background-color: rgb(17 24 39);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.containerMenu button:hover {
+    transform: scale(1.07);
+}
+
+.containerMenu button:active {
+    background-color: rgba(17, 24, 39, 0.852);
+}
+
+.containerMenu button img {
+    width: 15px;
+    height: 15px;
+}
+
+.containerTitleBebidas {
+    margin-top: 36px;
+    margin-bottom: 24px;
+}
+
+.containerTitleBebidas h2 {
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.containerBebidas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 5vw;
+    gap: 1vw;
+}
+
+.bebidas {
+    display: flex;
+    background-color: #ebe8e8c0;
+    border-radius: 15px;
+}
+
+.bebidas h3 {
+    font-size: 15px;
+}
+
+.descriptionBebidas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.valueBebidas {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+
+.containerBebidas img {
+    width: 128px;
+    height: 128px;
+    border-radius: 10px;
+}
+
+.containerBebidas h3 {
+    font-size: 18px;
+}
+
+.containerBebidas p {
+    font-size: 14px;
+}
+
+.containerBebidas button {
+    width: 50px;
+    height: 22px;
+    background-color: rgb(17 24 39);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.containerBebidas button:hover {
+    transform: scale(1.07);
+}
+
+.containerBebidas button:active {
+    background-color: rgba(17, 24, 39, 0.852);
+}
+
+.containerBebidas button img {
+    width: 15px;
+    height: 15px;
+}
+
+#modal {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.781);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalCarrinho {
+    width: 600px;
+    max-height: 90%;
+    background-color: #cdcaca;
+    border-radius: 6px;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.carrinho {
+    padding: 20px;
+
+}
+
+#closeModal {
+    background-color: #cdcaca;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+    align-self: end;
+    position: fixed;
+}
+
+#closeModal:hover {
+    transform: scale(1.06);
+}
+
+
+.carrinho h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 8px;
+}
+
+
+#itens-carrinho {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.price-total {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.address {
+    font-size: 15px;
+    margin-top: 10px;
+
+}
+
+#address {
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+#addressError {
+    display: none;
+    color: red;
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.modalPedido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+#finalizarPedido {
+    background-color: #54CC0A;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 8px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#finalizarPedido:hover {
+    transform: scale(1.06);
+    background-color: #54cc0a8f;
+}
+
+#itens-carrinho {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.containerModalItens {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    border: 2px solid gray;
+    border-radius: 6px;
+    padding: 6px;
+    height: 100px;
+}
+
+.containerModalItens div {
+    justify-content: center;
+    align-items: center;
+}
+
+.containerModalItens button {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.containerModalItens button:hover {
+    transform: scale(1.1);
+}
+
+.name {
+    font-weight: bold;
+}
+
+.quantity {
+    font-weight: 400;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.incrementDecrement {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+footer button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20px;
+    background-color: red;
+    border: none;
+    position: fixed;
+    bottom: 0;
+    z-index: 40;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s;
+    gap: 2px;
+}
+
+footer button:hover {
+    transform: scale(1.07);
+}
+
+footer button:active {
+    background-color: rgb(241, 79, 79);
+}
+
+#numberItens {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .containerMenu {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 3vw;
+        gap: 2vw;
+    }
+
+    .modalCarrinho {
+        width: 90%;
+        height: 90%;
+    }
+
+    #itens-carrinho {
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+
+    .containerModalItens {
+        height: 140px
+    }
+}
+
+@media (max-width: 380px) {
+    .containerMenu {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 1vw;
+        gap: 1vw;
+    }
+
+    .valueMenu {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 720px) {
+    .containerBebidas {
+        margin: 0 1vw;
+        gap: 1vw;
+    }
+
+    .descriptionBebidas {
+        text-align: center;
+        line-height: 20px;
+    }
+
+    .valueBebidas {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        line-height: 20px;
+    }
+
+}
+
+@media (max-width: 560px) {
+    .containerBebidas {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 1vw;
+        gap: 1vw;
+    }
+
+    .bebidas {
+        justify-content: center;
+        gap: 2vw;
+    }
+
+    .valueBebidas {
+        gap: 5px;
+    }
+}
